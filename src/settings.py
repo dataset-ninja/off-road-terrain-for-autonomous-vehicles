@@ -53,7 +53,7 @@ CLASS2COLOR: Optional[Dict[str, List[str]]] = None
 # Use dict key to specify name for a button
 PAPER: Optional[Union[str, List[str], Dict[str, str]]] = ["https://www.dre.vanderbilt.edu/~schmidt/PDF/paper_1.pdf"]
 BLOGPOST: Optional[Union[str, List[str], Dict[str, str]]] = None
-REPOSITORY: Optional[Union[str, List[str], Dict[str, str]]] = None
+REPOSITORY: Optional[Union[str, List[str], Dict[str, str]]] = ["https://github.com/magnumresearchgroup/TerrainRoughnessPrediction"]
 
 CITATION_URL: Optional[str] = "https://www.kaggle.com/datasets/magnumresearchgroup/offroad-terrain-dataset-for-autonomous-vehicles"
 AUTHORS: Optional[List[str]] = ["Gabriela Gresenz", "Jules White", "Douglas C. Schmidt"]
@@ -62,7 +62,7 @@ ORGANIZATION_NAME: Optional[Union[str, List[str]]] = ["Vanderbilt University"]
 ORGANIZATION_URL: Optional[Union[str, List[str]]] = ["https://www.vanderbilt.edu/"]
 
 # Set '__PRETEXT__' or '__POSTTEXT__' as a key with string value to add custom text. e.g. SLYTAGSPLIT = {'__POSTTEXT__':'some text}
-SLYTAGSPLIT: Optional[Dict[str, Union[List[str], str]]] = {"__POSTTEXT__":"Dataset contatins the corresponding sensor data from a global positioning system (GPS, inertial measurement units (IMUs), a wheel rotation speed sensor, z-axis acceleration"}
+SLYTAGSPLIT: Optional[Dict[str, Union[List[str], str]]] = {"__POSTTEXT__":"Dataset contatins the corresponding sensor data from a global positioning system (GPS, inertial measurement units (IMUs), a wheel rotation speed sensor, z-axis acceleration). In original, all sensor and label data consider in seven csv files(accelerometer_calibrated_split.csv, gps.csv, gyroscope_calibrated_split.csv, magnetometer_split.csv and record.csv - for Sensor Data, tsm_1_labels.csv,tsm_2_labels.csv - for Image Labels). All data has been carefully transferred to tag format: ***tsm1_original***, ***tsm2_k2*** ... etc. from tsm_1_labels.csv and tsm_2_labels, ***accel_x (counts)***, ***calibrated_accel_x (g)***... etc from accelerometer_calibrated_split.csv etc. Each column in the source data corresponds to a tag, except utc_s(s) and utc_ms(ms)(this data contatins in image name). Please note that not every image has a tag due to differences in the frequency of data collection."}
 TAGS: Optional[List[str]] = None
 
 
