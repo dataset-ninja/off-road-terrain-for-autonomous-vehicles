@@ -21,7 +21,7 @@ HIDE_DATASET = True  # set False when 100% sure about repo quality
 # * After uploading to instance ##
 ##################################
 LICENSE: License = License.Unknown()
-APPLICATIONS: List[Union[Industry, Domain, Research]] = [Industry.Automotive()]
+APPLICATIONS: List[Union[Industry, Domain, Research]] = [Industry.Automotive(is_used=False)]
 CATEGORY: Category = Category.SelfDriving()
 
 CV_TASKS: List[CVTask] = [CVTask.Classification()]
@@ -43,7 +43,7 @@ GITHUB_URL: str = "https://github.com/dataset-ninja/off-road-terrain-for-autonom
 ##################################
 ### * Optional after uploading ###
 ##################################
-DOWNLOAD_ORIGINAL_URL: Optional[Union[str, dict]] = "https://www.kaggle.com/datasets/magnumresearchgroup/offroad-terrain-dataset-for-autonomous-vehicles"
+DOWNLOAD_ORIGINAL_URL: Optional[Union[str, dict]] = ["https://www.kaggle.com/datasets/magnumresearchgroup/offroad-terrain-dataset-for-autonomous-vehicles"]
 # Optional link for downloading original dataset (e.g. "https://some.com/dataset/download")
 
 CLASS2COLOR: Optional[Dict[str, List[str]]] = None
@@ -51,7 +51,7 @@ CLASS2COLOR: Optional[Dict[str, List[str]]] = None
 
 # If you have more than the one paper, put the most relatable link as the first element of the list
 # Use dict key to specify name for a button
-PAPER: Optional[Union[str, List[str], Dict[str, str]]] = "https://www.dre.vanderbilt.edu/~schmidt/PDF/paper_1.pdf"
+PAPER: Optional[Union[str, List[str], Dict[str, str]]] = ["https://www.dre.vanderbilt.edu/~schmidt/PDF/paper_1.pdf"]
 BLOGPOST: Optional[Union[str, List[str], Dict[str, str]]] = None
 REPOSITORY: Optional[Union[str, List[str], Dict[str, str]]] = None
 
@@ -62,7 +62,7 @@ ORGANIZATION_NAME: Optional[Union[str, List[str]]] = ["Vanderbilt University"]
 ORGANIZATION_URL: Optional[Union[str, List[str]]] = ["https://www.vanderbilt.edu/"]
 
 # Set '__PRETEXT__' or '__POSTTEXT__' as a key with string value to add custom text. e.g. SLYTAGSPLIT = {'__POSTTEXT__':'some text}
-SLYTAGSPLIT: Optional[Dict[str, Union[List[str], str]]] = {"__POSTTEXT__":"Dataset contatins the corresponding sensor data from a global positioning system (GPS, inertial measurement units (IMUs), and a wheel rotation speed sensor, z-axis acceleration"}
+SLYTAGSPLIT: Optional[Dict[str, Union[List[str], str]]] = {"__POSTTEXT__":"Dataset contatins the corresponding sensor data from a global positioning system (GPS, inertial measurement units (IMUs), a wheel rotation speed sensor, z-axis acceleration"}
 TAGS: Optional[List[str]] = None
 
 
