@@ -21,7 +21,7 @@ HIDE_DATASET = True  # set False when 100% sure about repo quality
 # * After uploading to instance ##
 ##################################
 LICENSE: License = License.Unknown()
-APPLICATIONS: List[Union[Industry, Domain, Research]] = [Industry.Automotive(is_used=False)]
+APPLICATIONS: List[Union[Industry, Domain, Research]] = [Industry.Automotive(is_used=True)]
 CATEGORY: Category = Category.SelfDriving()
 
 CV_TASKS: List[CVTask] = [CVTask.Classification()]
