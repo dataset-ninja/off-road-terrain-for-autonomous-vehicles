@@ -31,7 +31,7 @@ These images are not filtered by whether they contain a path, optimal lighting, 
 
 The accelerometer, gyroscope, magnetometer, and GPS CSV files contain system timestamps that represent the relative time since the start of the data collection session, and calculated UTC timestamps. The GPS CSV file also contains a UTC timestamp recorded by the sensor, which may not always align with the calculated UTC timestamp due to sensor lags at certain parts in the forest. Calibrated readings correspond directly to the x-, y-, and z-axes and are in the conventionally understood units. Our data did not contain the calibration factor necessary to calibrate the magnetometer CSV, meaning that the x-, y-, and z-axis readings may not correspond directly to these axes. The speed and velocity readings in the GPS CSV file are GPS estimates and are significantly less accurate than the speed readings in the record CSV file, which are recorded from the wheel rotation speed sensor.
 
-### Roughness Metric
+## Roughness Metric
 
 Many studies have used z-axis acceleration to examine
 terrain roughness ([[4]](https://www.researchgate.net/publication/340879363_SVM_based_sensor_fusion_for_improved_terrain_classification_Conference_Presentation), [[8]](https://arxiv.org/abs/1206.6872), [[13]](https://ieeexplore.ieee.org/document/4059113), [[16]](https://www.ri.cmu.edu/publications/semantic-segmentation-for-terrain-roughness-estimation-using-data-autolabeled-with-a-custom-roughness-metric/) in Paper). This measure provides insight about how the vehicle’s motion will be affected b traversing the upcoming terrain. Although Stavens et al. [8](https://arxiv.org/abs/1206.6872) standardized their measure of roughness by speed, authors used a different approach with our roughness metrics since our data did not exhibit a linear relationship between z-axis acceleration and speed, likely because the speeds of our vehicle (i.e., a bicycle) were significantly slower than the vehicle (i.e., a car) used by Stavens et al. Our roughness metric takes the standard deviation of a 1 second window of z-axis acceleration readings. This metric is a comprehensive measure of the terrain in the sample and is stable when the sample’s mean is nonzero (such as traveling down a hill with increasing acceleration). While our samples could reflect between 1–7 meters since the vehicle’s speed was typically between 1–7 m/s, a standard sample size was important to avoid certain samples being more susceptible to outliers than others.
@@ -43,7 +43,7 @@ Authors then determined which 1-second window of z-axis acceleration readings sh
 
 Authors discretized the continuous roughness metric using each of four methods: data visualization (examining the data distribution and z-axis acceleration readings alongside the continuous roughness metric), k-means clustering with k = 2, k-means clustering with k = 3, and k-means clustering with k = 4. These methods will be referred to as original groups, k = 2 groups, k = 3 groups, and k = 4 groups, respectively. In calculating the 1 second sample for TSM 1, only 0.99 seconds of readings were included.
 
-### Labeling Images
+## Labeling Images
 
 Each image was assigned eight labels, one for each possible
 combination of the two methods of sampling the terrain and
