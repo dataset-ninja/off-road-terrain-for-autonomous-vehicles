@@ -19,15 +19,15 @@ Image frames are named by their UTC timestamps in seconds and milliseconds (e.g.
 These images are not filtered by whether they contain a path, optimal lighting, or sufficient visible terrain for terrain learning so that researchers have access to the entire range of images collected by the vehicle. The size of each image is 3,840 x 2,160 pixels. Sensor data is store in a format called a “fit file.” Authors converted fit files to comma-separated-value (CSV) files using tools provided by [Garmin](https://developer.garmin.com/fit/fitcsvtool/). Authors then formatted each CSV to a state-based representation where each row contains the readings at a single timestamp and add UTC timestamps to each reading so the data can be used alongside the image frames. This dataset contains the information described below:
 
 1. Formatted sensor data. There is a folder for each data collection session with the following CSVs.
-- accelerometer calibrated split.csv which contains the calibrated and uncalibrated acceleration readings from the accelerometer, taken ∼10 ms apart.
-- gyroscope calibrated split.csv which contains the calibrated and uncalibrated readings from the gyroscope, taken ∼10 ms apart.
-- magnetometer split.csv, which contains the uncalibrated magnetometer readings.
+- accelerometer_calibrated split.csv which contains the calibrated and uncalibrated acceleration readings from the accelerometer, taken ∼10 ms apart.
+- gyroscope_calibrated split.csv which contains the calibrated and uncalibrated readings from the gyroscope, taken ∼10 ms apart.
+- magnetometer_split.csv, which contains the uncalibrated magnetometer readings.
 - gps.csv, which contains the vehicle’s latitute, longitude, altitude, speed, heading, and velocity, taken ∼100 ms apart.
 - record.csv, which contains the vehicle’s latitude, longitude, distance traveled, speed, and altitude, taken 1 second apart.
 
 2. Roughness labels for images. CSVs of the eight potential roughness labels for the subset of images valid for these labeling schemas are included, as described in Section V in source.
-- labels tsm1.csv contains Labels 1–4.
-- labels tsm2.csv contians Labels 5–8.
+- labels_tsm1.csv contains Labels 1–4.
+- labels_tsm2.csv contians Labels 5–8.
 
 The accelerometer, gyroscope, magnetometer, and GPS CSV files contain system timestamps that represent the relative time since the start of the data collection session, and calculated UTC timestamps. The GPS CSV file also contains a UTC timestamp recorded by the sensor, which may not always align with the calculated UTC timestamp due to sensor lags at certain parts in the forest. Calibrated readings correspond directly to the x-, y-, and z-axes and are in the conventionally understood units. Authors data did not contain the calibration factor necessary to calibrate the magnetometer CSV, meaning that the x-, y-, and z-axis readings may not correspond directly to these axes. The speed and velocity readings in the GPS CSV file are GPS estimates and are significantly less accurate than the speed readings in the record CSV file, which are recorded from the wheel rotation speed sensor.
 
