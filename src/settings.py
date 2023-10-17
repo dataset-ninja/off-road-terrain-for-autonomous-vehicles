@@ -53,7 +53,7 @@ CLASS2COLOR: Optional[Dict[str, List[str]]] = None
 # Use dict key to specify name for a button
 PAPER: Optional[Union[str, List[str], Dict[str, str]]] = ["https://www.dre.vanderbilt.edu/~schmidt/PDF/paper_1.pdf"]
 BLOGPOST: Optional[Union[str, List[str], Dict[str, str]]] = None
-REPOSITORY: Optional[Union[str, List[str], Dict[str, str]]] = ["https://github.com/magnumresearchgroup/TerrainRoughnessPrediction"]
+REPOSITORY: Optional[Union[str, List[str], Dict[str, str]]] = {"Github": "https://github.com/magnumresearchgroup/TerrainRoughnessPrediction"}
 
 CITATION_URL: Optional[str] = "https://www.kaggle.com/datasets/magnumresearchgroup/offroad-terrain-dataset-for-autonomous-vehicles"
 AUTHORS: Optional[List[str]] = ["Gabriela Gresenz", "Jules White", "Douglas C. Schmidt"]
