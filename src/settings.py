@@ -53,10 +53,11 @@ CLASS2COLOR: Optional[Dict[str, List[str]]] = None
 # Use dict key to specify name for a button
 PAPER: Optional[Union[str, List[str], Dict[str, str]]] = ["https://www.dre.vanderbilt.edu/~schmidt/PDF/paper_1.pdf"]
 BLOGPOST: Optional[Union[str, List[str], Dict[str, str]]] = None
-REPOSITORY: Optional[Union[str, List[str], Dict[str, str]]] = {"Github": "https://github.com/magnumresearchgroup/TerrainRoughnessPrediction"}
+REPOSITORY: Optional[Union[str, List[str], Dict[str, str]]] = {"GitHub": "https://github.com/magnumresearchgroup/TerrainRoughnessPrediction"}
 
 CITATION_URL: Optional[str] = "https://www.kaggle.com/datasets/magnumresearchgroup/offroad-terrain-dataset-for-autonomous-vehicles"
 AUTHORS: Optional[List[str]] = ["Gabriela Gresenz", "Jules White", "Douglas C. Schmidt"]
+AUTHORS_CONTACTS: Optional[List[str]] = ["gabriela.r.gresenz@vanderbilt.edu", "jules.white@vanderbilt.edu", "douglas.c.schmidt@vanderbilt.edu"]
 
 ORGANIZATION_NAME: Optional[Union[str, List[str]]] = ["Vanderbilt University"]
 ORGANIZATION_URL: Optional[Union[str, List[str]]] = ["https://www.vanderbilt.edu/"]
@@ -110,6 +111,7 @@ def get_settings():
     settings["repository"] = REPOSITORY
     settings["citation_url"] = CITATION_URL
     settings["authors"] = AUTHORS
+    settings["authors_contacts"] = AUTHORS_CONTACTS
     settings["organization_name"] = ORGANIZATION_NAME
     settings["organization_url"] = ORGANIZATION_URL
     settings["slytagsplit"] = SLYTAGSPLIT
