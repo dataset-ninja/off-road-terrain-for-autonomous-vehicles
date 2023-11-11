@@ -24,7 +24,7 @@ LICENSE: License = License.Unknown()
 APPLICATIONS: List[Union[Industry, Domain, Research]] = [Industry.Automotive(is_used=True)]
 CATEGORY: Category = Category.SelfDriving()
 
-CV_TASKS: List[CVTask] = [CVTask.Classification()]
+CV_TASKS: List[CVTask] = [CVTask.Identification()]
 ANNOTATION_TYPES: List[AnnotationType] = []
 
 RELEASE_DATE: Optional[str] = None  # e.g. "YYYY-MM-DD"
